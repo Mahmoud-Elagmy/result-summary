@@ -1,0 +1,187 @@
+body {
+    background-color: hsl(241, 100%, 89%);
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-width: 375px;
+    min-height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 650px;
+    height: 450px;
+    margin: 20px auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+@media (max-width: 375px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 375px;
+        height: 800px;
+    }
+}
+
+.left h1 {
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 24px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%) 30%, hsl(241, 81%, 54%) 70%);
+    border-radius: 15px;
+}
+
+.grade {
+    flex-wrap: wrap;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 50px;
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1) 30%, hsla(241, 72%, 46%, 0) 70%);
+}
+
+.grade span {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.left p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.right {
+    margin-left: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.right h1 {
+    color: hsl(224, 30%, 27%);
+    font-size: 24px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin: 0 auto;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    gap: 15px;
+    text-align: left;
+}
+
+.reaction {
+    background-color: hsl(0, 100%, 67%, 0.15);
+}
+
+.memory {
+    background-color: hsl(39, 100%, 56%, 0.15);
+}
+
+.verbal {
+    background-color: hsl(166, 100%, 37%, 0.15);
+}
+
+.visual {
+    background-color: hsl(234, 85%, 45%, 0.15);
+}
+
+.reaction img,
+.memory img,
+.verbal img,
+.visual img {
+    display: block;
+    width: 20px;
+}
+
+.reaction p,
+.memory p,
+.verbal p,
+.visual p {
+    margin: 0;
+    padding: 0;
+}
+
+.reaction p:first-of-type,
+.memory p:first-of-type,
+.verbal p:first-of-type,
+.visual p:first-of-type {
+    flex-grow: 1;
+    margin-left: auto;
+    color: hsl(224, 30%, 27%);
+}
+
+.reaction p:nth-of-type(2),
+.memory p:nth-of-type(2),
+.verbal p:nth-of-type(2),
+.visual p:nth-of-type(2) {
+    margin-left: 0;
+    color: hsl(224, 30%, 29%);
+}
+
+.reaction p:nth-of-type(3),
+.memory p:nth-of-type(3),
+.verbal p:nth-of-type(3),
+.visual p:nth-of-type(3) {
+    margin-left: -5px;
+    color: hsl(224, 30%, 29%, 0.5);
+}
+
+.right button {
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(224, 30%, 27%);
+    margin-top: -25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.right button:hover {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(252, 100%, 67%);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(241, 81%, 54%);
+}
